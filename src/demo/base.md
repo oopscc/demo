@@ -39,3 +39,15 @@
         - function由于存在状态提升的问题，不能使用装饰着模式，要使用高阶函数代替
 - 判断对象全等
     - say something
+- 缓存
+    - 强缓存
+        - Expires  1.0
+        - Cache-Control 1.1  max-age
+    - 协商缓存
+        - Last-Modified 和 If-Modified-Since
+        - ETag 和 If-None-Match
+    - 缓存策略
+        - 不需要缓存的 Cache-control: no-store
+        - 频繁变动的 Cache-Control: no-cache + ETag(业务逻辑代码)
+        - 代码文件  Cache-Control: max-age=31536000 + 版本好hash
+
