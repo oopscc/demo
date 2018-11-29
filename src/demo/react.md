@@ -1,0 +1,25 @@
+- setState之后发生了什么
+	- 状态合并=> 构建react VDOM=> diff => render
+- react Element,Component区别
+	- jsx 语法糖，编译成 react creatElement
+	- components 接受参数返回某个element 函数或者类
+-  component 分为 Class组件和Functional 组件
+	-   组件内包含内部状态或使用生命周期的时候，使用Class
+- React refs的作用
+	- React 提供给我们的安全访问 DOM 元素或者某个组件实例的句柄
+- 回调渲染模式 。
+	- 组件会接收某个函数作为其子组件，然后在渲染函数中以props.children进行调用这个函数
+- react事件处理逻辑
+  - bind.this的问题
+-  新版react生命周期
+	-  getDerivedStateFromProps
+		-  代替componentWillReceiveProps
+		-  constructor后或prpos改变触发，setState不触发
+	-  getSnapshotBeforeUpdate
+		- 在react render()后的输出被渲染到DOM之前被调用。它使您的组件能够在它们被潜在更改之前捕获当前值（如滚动位置）。这个生命周期返回的任何值都将作为参数传递给componentDidUpdate（）
+	-  componentDidCatch
+		-  可以在其子组件树中的任何位置捕获JavaScript错误，记录这些错误并显示回退UI，而不是崩溃的组件树。
+-  bind.this的问题，事件
+-  状态提升 redux
+-  函数组件写法
+-  https://blog.csdn.net/qq_29311407/article/details/79861522

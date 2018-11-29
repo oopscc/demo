@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import Promise from './demo/promise'
+import Promise from './demo/index'
 
 class App extends Component {
     componentDidMount () {
-        new Promise()
+        // new Promise()
     }
     render() {
         return (
