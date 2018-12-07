@@ -1,47 +1,30 @@
-function Parent (name) {
-    this.name = name;
-    this.color= ['red', 'gray']
-}
-Parent.prototype.say = function () {
-    console.log('parent: '+this.name)
-}
-function Child(name) {
-    Parent.call(this, name)
-}
-Child.prototype = new Parent()
-Child.prototype.constructor = Child
 
-// function Object(obj) {
-//     let F = function() {}
-//     F.prototype = obj
-//     return new F()
-// }
-// let prototype = Object(Parent.prototype)
-// prototype.constructor = Child
-// Child.prototype = prototype
+/**
+ * 高阶函数
+ * - 参数复用，避免大量的代码重复
+ * - 动态创建函数
+ * - 延迟计算
+ * -
+- 高阶组件
+- 封装并分离组件的通用逻辑，复用通用逻辑
+- 装饰者模式
+ */
 
-var a = new Child('vv')
-window.a = a
-console.log(a)
-
-/*
-Parent(){}                      Parent.prototype
-prototype                       constructor
-
-Child(){}                       Child.prototype
-prototype                       constructor
-                                __prototype__
-new Child()
-__prototype__
-*/
-
-async function aa () {
-    console.log(1)
-    await new Promise( (a, b) => {
-
-        setTimeout(() => {console.log(2)} )
-        a()
-    })
-    console.log(3)
-}
-window.b = aa()
+ /**
+  * 性能优化
+  - 70%的时间浪费在网络请求上。 domcontentload， onload
+  - 减少网络请求时间
+    - 减少网络请求次数
+    - 多并发，多源
+    - 减少文件体积, js,css文件合并，图片雪碧图
+    - 使用cdn加速
+    - h5资源离线包
+    - 缓存策略
+        - 强缓存
+        - 协商缓存
+  - 减少页面渲染时间
+    - ssr
+    - 懒加载
+    - requestAnimationFrame
+    - 减少重绘和回流
+  */
