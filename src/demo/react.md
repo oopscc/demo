@@ -10,6 +10,7 @@
 - 回调渲染模式 。
 	- 组件会接收某个函数作为其子组件，然后在渲染函数中以props.children进行调用这个函数
 - react事件处理逻辑
+  -
   - bind.this的问题
 -  新版react生命周期
 	-  getDerivedStateFromProps
@@ -23,3 +24,5 @@
 -  状态提升 redux
 -  函数组件写法
 -  https://blog.csdn.net/qq_29311407/article/details/79861522
+
+

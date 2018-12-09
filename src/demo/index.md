@@ -83,5 +83,10 @@
 - 高阶组件 connect
     -
 - vue、react异同
-    -
+    － 数据流向不同。 但是都用单项数据流redex管理起来了
+    - 监听数据变化的方式不同
+    － 模版渲染方式不同
+    － vuex和redux不同
+        －vuex的Sstore直接注入到vue组件中。可以直接commit upadte。 而redux需要connect将action和diapacth链接映射到组件。只能通过reduce的方式改变数据。
+        － 比较引用的方式，如果不优化，将导致大量vnode重绘
 
