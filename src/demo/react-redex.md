@@ -15,3 +15,6 @@
 	- Provider在根组件外面包了一层，这样一来，App的所有子组件就默认都可以拿到state了。Provider的唯一功能就是传入store对象。
 	- 通过React组件的context属性实现。一个接受store的组件，通过react的context上下文api传递给所有子组件
 ![Alt text](./image.png)
+
+- 容器组件
+- 现在来创建一些容器组件把这些展示组件和 Redux 关联起来。技术上讲，容器组件就是使用 store.subscribe() 从 Redux state 树中读取部分数据，并通过 props 来把这些数据提供给要渲染的组件
