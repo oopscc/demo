@@ -20,3 +20,11 @@
 	- redux-logger 日志输出
 	- redux-thunk  处理异步操作
 	- redux-promise  处理异步操作
+
+
+#### 5点不同：
+- 监听数据变化原理不同
+- 模版渲染不同
+- mixin和hoc
+- 数据流方向不同
+- redux，vuex不同
